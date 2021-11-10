@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="soe.css">
+</head>
+<body>
+   <form>
+       <fieldset class="login-form">
+           <legend>
+            <i class="fas fa-lock"></i>
+               Login From
+           </legend>
+           <div class="form-input">
+            <label for="name"><i class="fas fa-user"></i>User Name</label>
+            <input type="text" name="" placeholder="Your name" id="name">
+           </div>
+           <div class="form-input">
+            <label for="pass"><i class="fas fa-key"></i>Password</label>
+            <input type="password" name=""  placeholder="Password" id="pass">
+        </div>
+        <div class="login-btn">
+            <button class="btn" onclick="showData()"><i class="fas fa-lock-open icon"></i>Login</button>
+        </div>
+        <a href="#" class="reg">Register account</a>
+       </fieldset>
+   </form>
+   
+   <script>
+
+    //Selector
+    const nameInput = document.getElementById('name');
+    const passInput = document.getElementById('pass');
+    const btn = document.querySelector('.login-btn');
+
+    //Event
+    
+
+    //
+    function showData(){
+        let nameText = nameInput.value;
+        let passText = passInput.value;
+
+        alert(`Congraturation! your name is "${nameText}" , your pass is "${passText}"`);
+        nameInput.value = "";
+        passInput.value = "";
+    }
+    
+
+   </script>
+
+</body>     
+</html>
